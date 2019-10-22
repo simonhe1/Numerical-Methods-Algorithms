@@ -6,6 +6,7 @@ import Bisection from './Bisection Algorithm';
 import NewtonRaphson from './Newton-Raphson Algorithm';
 import Secant from './Secant Algorithm';
 import AvramSidis from './Avram-Sidis Algorithm';
+import LUDecomposition from './LU Decomposition';
 
 class App extends Component {
   constructor(props){
@@ -36,6 +37,8 @@ class App extends Component {
         return <Secant goBack={this.handleClick}/>
       case 6:
         return <AvramSidis goBack={this.handleClick}/>
+      case 7:
+        return <LUDecomposition goBack={this.handleClick}/>
       default:
         return(
           <div>
@@ -47,6 +50,7 @@ class App extends Component {
           <div className="text-center" onClick={e => this.handleClick(4)}>Newton-Raphson Algorithm</div>
           <div className="text-center" onClick={e => this.handleClick(5)}>Secant Method Algorithm</div>
           <div className="text-center" onClick={e => this.handleClick(6)}>Avram Sidis Method Algorithm</div>
+          <div className="text-center" onClick={e => this.handleClick(7)}>LU Decomposition Method Algorithm</div>
           <div className="text-center">Back Substitution Algorithm</div>
           <div className="text-center">Scaled Pivots Algorithm</div>
         </div>
