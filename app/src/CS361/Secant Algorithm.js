@@ -35,7 +35,6 @@ class Secant extends Component {
                 x_next = x1 - (((x1-x0)/(f_x1 - f_x0))*f_x1);
                 console.log('precision:',Math.abs(x_next-x1),'threshold',threshold);
                 if(Math.abs(x_next - x1) <= threshold){
-                    
                     break;
                 }
                 console.log('x_i-1:',x0);
