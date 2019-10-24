@@ -35,7 +35,7 @@ class NewtonRaphson extends Component {
                 let f_prime_x = simplify(derivative(exp,'x')).evaluate({x: x});
                 console.log('f(x)',f_x);
                 console.log(`f'(x)`,f_prime_x);
-                temp_x = x - (f_x) / (f_prime_x);
+                temp_x = x - ((f_x) - x / (f_prime_x));
                 if(Math.abs(x - temp_x) <= threshold) {
                     x = temp_x;
                     break;

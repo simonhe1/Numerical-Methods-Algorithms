@@ -8,6 +8,27 @@ class Lagrange extends Component {
         };
     }
 
+    lagrange(){
+        let xi = 3;
+        let points = 
+        [
+            {x:0,y:2},
+            {x:1,y:3},
+            {x:2,y:12},
+            {x:5,y:147},
+        ];
+        let result = 0;
+        for(let i=0;i<points.length;i++){
+            let term = parseFloat(points[i].y);
+            for(let j=0;j<points.length;j++){
+                if(j!=i)
+                    term = term*(xi - points[j].x)/(parseFloat(points[i].x - points[j].x));
+            }
+        result+=term;            
+        }
+        console.log(result);
+    }
+
     renderPoints(size){this.setState({size});}
     pluginPoints(point, index){
         if(point.indexOf(')') !== -1){
@@ -37,7 +58,8 @@ class Lagrange extends Component {
         return points;
     }
 
-    render() { 
+    render() {
+        this.lagrange(); 
         return (
             <div>
                 <h1 className="text-center">Lagrange Interpolation Algorithm</h1>
