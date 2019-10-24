@@ -38,7 +38,7 @@ class Horner extends Component {
                         placeholder="Coefficient"
                         onChange={e => this.populateCoefficient(e,i)}
                     />
-                    <span>X^{i}</span>
+                    <span>X<sup>{i}</sup></span>
                 </div>
             );
         }

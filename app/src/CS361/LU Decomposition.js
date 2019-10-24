@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { lusolve,lup } from 'mathjs';
+import { lusolve } from 'mathjs';
 
 class LUDecomposition extends Component {
     constructor(props){
@@ -148,7 +148,6 @@ class LUDecomposition extends Component {
                 Solution
                     {this.findSolution()}
                 </div>
-
             </div>
         );
     }
